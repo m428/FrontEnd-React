@@ -127,5 +127,15 @@ module.exports.getRandomNumberOfProjects = function () {
 };
 
 module.exports.getProjectsForCategory = function () {
-	var categories = projects.slice(0, randomIntIncludeUpper(6, projects.length));
+	var tempProjects = projects.slice(0, randomIntIncludeUpper(6, projects.length));
+	var tempValue;
+	var index = tempProjects.length - 1;
+	while (remainingProjects > 0) {
+		var indexToSwap = Math.floor(Math.random * remainingProjects);
+		tempValue = tempProjects[index];
+		tempProjects[index] = tempProjects[indexToSwap];
+		tempProjects[indexToSwap] = tempValue;
+	}
+	
+	return tempProjects;
 };
