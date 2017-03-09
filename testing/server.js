@@ -5,13 +5,15 @@
 var express		= require("express");				// Main server framework
 var multipart	= require("connect-multiparty");	// Express middleware for parsing multipart/form-data
 var path		= require("path");
+var fs			= require("fs");
 
 // Local files
 var data = require("./data.js");
+var uploadDirectory = path.join(__dirname, "./uploads")
 
 // Set up the Express Application
 expressApp = express();
-expressApp.use(multipart({ uploadDir: "./uploads"}));
+expressApp.use(multipart({ uploadDir: uploadDirectory}));
 expressApp.use("/static", express.static(path.join(__dirname, "/public"))); // serve up static resources
 
 // Render the Community Projects page
@@ -25,7 +27,47 @@ expressApp.get("/newProject", function (request, response) {
 });
 
 expressApp.post("/newProject", function (request, response) {
-	request.files.image.path
+	var requiredBodyParameters = ["title", "description", "instructions"]
+	var requiredInstructionsParameters = ["title", "time", "instruction"];
+	var requiredFiles = ["posterImage"];
+
+	var error = false;
+	for (var i = requiredBodyParameters.length - 1; i >= 0; i--)
+	{
+		if (!request.body[requiredBodyParameters[i]]) {
+			error = true; break;
+		}
+	}
+
+	request.body.instructions = JSON.parse(request.body.instructions);
+	for (var i = request.body.instructions.length - 1; i >= 0; i--)
+	{
+		for (var j = requiredInstructionsParameters.length - 1; j >= 0; j--)
+		{
+			if (!request.body.instructions[i][requiredInstructionsParameters[j]]) {
+				error = true; break;
+			}
+		}
+	}
+
+	for (var i = requiredFiles.length - 1; i >= 0; i--)
+	{
+		if (!request.files[requiredFiles[i]] || request.files[requiredFiles[i]].size <= 0) {
+			error = true; break;
+		}
+	}
+
+	// Remove uploaded files
+	var files = fs.readdirSync(uploadDirectory);
+	files.forEach(function (file) {
+		fs.unlinkSync(path.join(uploadDirectory, file));
+	});
+
+	if (error) {
+		response.sendStatus(400);
+	} else {
+		response.sendStatus(200)
+	}
 });
 
 expressApp.get("/categories", function (request, response) {
