@@ -12,7 +12,7 @@ var data = require("./data.js");
 // Set up the Express Application
 expressApp = express();
 expressApp.use(multipart({ uploadDir: "./uploads"}));
-expressApp.use(express.static(path.join(__dirname, "/public"))); // serve up static resources
+expressApp.use("/static", express.static(path.join(__dirname, "/public"))); // serve up static resources
 
 // Render the Community Projects page
 expressApp.get("/", function (request, response) {
@@ -41,7 +41,16 @@ expressApp.get("/projects", function (request, response) {
 });
 
 expressApp.get("/projects/:category", function (request, response) {
-	response.send(data.getProjectsForCategory(request.params.category));
+	var lowerCategories = [];
+	for (var i = data.categories.length - 1; i >= 0; i--) {
+		lowerCategories.push(data.categories[i].toLowerCase());
+	}
+
+	if (lowerCategories.indexOf(request.params.category.toLowerCase()) < 0) {
+		response.sendStatus(404);
+	} else {
+		response.send(data.getProjectsForCategory(request.params.category));
+	}
 });
 
 // Start the server
