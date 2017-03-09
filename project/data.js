@@ -5,116 +5,104 @@
 
 module.exports = {}
 
-module.exports.categories = ["Furniture", "Artwork", "Jewelry", "Cabinetry"];
+module.exports.categories = ["Furniture", "Artwork", "Jewelry", "Cabinetry", "Joinery", "Inlay"];
 
 module.exports.featuredProjects = [{
 									title: "Pebble Cutting Board",
 									description: "Use any hardwood to build your own custom engraved cutting board. Cutting and finishing take roughly 45 minutes. Have fun!",
-									posterImage: "/public/images/pebbleCuttingBoard",
+									posterImage: "/public/images/pebbleCuttingBoard.jpg",
 									likes: 25
 								}, {
 									title: "Soapbox Derby Car",
 									description: "Make your own soapbox derby car! The project requires a kit for the wheels and hardware. Cutting and assembly takes roughly 6 hours. Stay safe and have fun!",
-									posterImage: "/public/images/soapboxDerbyCar",
+									posterImage: "/public/images/soapboxDerbyCar.jpg",
 									likes: 38
 								}, {
 									title: "Skateboard",
 									description: "Have fun cruising on your custom skateboard. We recommend using maple ply. Cutting time takes approximately 30 minutes.",
-									posterImage: "/public/images/skateboard",
+									posterImage: "/public/images/skateboard.jpg",
 									likes: 42
 								}];
 
 var projects = [{
 				title: "Walnut Radio",
-				posterImage: "/public/images/walnutRatio",
+				posterImage: "/public/images/walnutRatio.jpg",
 				likes: 29
 			}, {
 				title: "Tilt Chair",
-				posterImage: "/public/images/tiltChair",
+				posterImage: "/public/images/tiltChair.jpg",
 				likes: 41
 			}, {
 				title: "Carbon Fiber Drone",
-				posterImage: "/public/images/carbonFiberDrone",
+				posterImage: "/public/images/carbonFiberDrone.jpg",
 				likes: 22
 			}, {
 				title: "Mona Lisa Engraving",
-				posterImage: "/public/images/monaLisaEngraving",
+				posterImage: "/public/images/monaLisaEngraving.jpg",
 				likes: 17
 			}, {
 				title: "Ring Bowl",
-				posterImage: "/public/images/ringBowl",
+				posterImage: "/public/images/ringBowl.jpg",
 				likes: 23
 			}, {
-				title: "Baby Boxcar",
-				posterImage: "/public/images/babyBoxcar",
-				likes: 22
-			}, {
-				title: "Peg Hop Game",
-				posterImage: "/public/images/pegHopGame",
-				likes: 54
-			}, {
 				title: "Brass Pendant",
-				posterImage: "/public/images/brassPendant",
+				posterImage: "/public/images/brassPendant.jpg",
 				likes: 74
 			}, {
-				title: "Heart Shaped Box",
-				posterImage: "/public/images/heartShapedBox",
-				likes: 16
-			}, {
 				title: "Pour Over Coffee Stand",
-				posterImage: "/public/images/pourOverCoffeeStand",
+				posterImage: "/public/images/pourOverCoffeeStand.jpg",
 				likes: 28
 			}, {
 				title: "Rocking Horse",
-				posterImage: "/public/images/rockingHorse",
+				posterImage: "/public/images/rockingHorse.jpg",
 				likes: 24
 			}, {
 				title: "Apple Box",
-				posterImage: "/public/images/appleBox",
+				posterImage: "/public/images/appleBox.jpg",
 				likes: 18
 			}, {
 				title: "Handplane",
-				posterImage: "/public/images/handplane",
+				posterImage: "/public/images/handplane.jpg",
 				likes: 33
 			}, {
 				title: "Cardboard Box Car",
-				posterImage: "/public/images/cardboardBoxCar",
+				posterImage: "/public/images/cardboardBoxCar.jpg",
 				likes: 46
 			}, {
 				title: "Copper Bracelets",
-				posterImage: "/public/images/copperBracelets",
+				posterImage: "/public/images/copperBracelets.jpg",
 				likes: 12
 			}, {
 				title: "Opendesk Studio Desk",
-				posterImage: "/public/images/opendeskStudioDesk",
+				posterImage: "/public/images/opendeskStudioDesk.jpg",
 				likes: 19
 			}, {
 				title: "Ukulele",
-				posterImage: "/public/images/ukulele",
+				posterImage: "/public/images/ukulele.jpg",
 				likes: 19
 			}, {
 				title: "Brass Dog Tag",
-				posterImage: "/public/images/brassDogTag",
+				posterImage: "/public/images/brassDogTag.jpg",
 				likes: 11
 			}, {
 				title: "Opendesk Edie Stool",
-				posterImage: "/public/images/openDeskEdieStool",
+				posterImage: "/public/images/opendeskEdieStool.jpg",
 				likes: 23
 			}, {
 				title: "Elm Coffee Table",
-				posterImage: "/public/images/elmCoffeeTable",
+				posterImage: "/public/images/elmCoffeeTable.jpg",
 				likes: 26
 			}, {
 				title: "Linoleum Block",
-				posterImage: "/public/images/linoleumBlock",
+				posterImage: "/public/images/linoleumBlock.jpg",
 				likes: 21
 			}, {
 				title: "Screwdriver Cleat Project",
-				posterImage: "/public/images/screwdriverCleatProject",
+				posterImage: "/public/images/screwdriverCleatProject.jpg",
 				likes: 32
 			}, {
 				title: "Cleat Light",
-				posterImage: "/public/images/cleatLight",
+				posterImage: "/public/images/cleatLight.jpg",
 				likes: 25
 			}]
 
@@ -136,6 +124,6 @@ module.exports.getProjectsForCategory = function () {
 		tempProjects[index] = tempProjects[indexToSwap];
 		tempProjects[indexToSwap] = tempValue;
 	}
-	
+
 	return tempProjects;
 };
