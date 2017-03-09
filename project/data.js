@@ -88,12 +88,44 @@ var projects = [{
 				title: "Opendesk Studio Desk",
 				posterImage: "/public/images/opendeskStudioDesk",
 				likes: 19
+			}, {
+				title: "Ukulele",
+				posterImage: "/public/images/ukulele",
+				likes: 19
+			}, {
+				title: "Brass Dog Tag",
+				posterImage: "/public/images/brassDogTag",
+				likes: 11
+			}, {
+				title: "Opendesk Edie Stool",
+				posterImage: "/public/images/openDeskEdieStool",
+				likes: 23
+			}, {
+				title: "Elm Coffee Table",
+				posterImage: "/public/images/elmCoffeeTable",
+				likes: 26
+			}, {
+				title: "Linoleum Block",
+				posterImage: "/public/images/linoleumBlock",
+				likes: 21
+			}, {
+				title: "Screwdriver Cleat Project",
+				posterImage: "/public/images/screwdriverCleatProject",
+				likes: 32
+			}, {
+				title: "Cleat Light",
+				posterImage: "/public/images/cleatLight",
+				likes: 25
 			}]
 
-module.exports.getRandomNumberOfProjects = function () {
+function randomIntIncludeUpper(low, high) {
+	return Math.ceil(Math.random * (high - low) + low);
+}
 
+module.exports.getRandomNumberOfProjects = function () {
+	return projects.slice(0, randomIntIncludeUpper(6, projects.length));
 };
 
 module.exports.getProjectsForCategory = function () {
-
+	var categories = projects.slice(0, randomIntIncludeUpper(6, projects.length));
 };
