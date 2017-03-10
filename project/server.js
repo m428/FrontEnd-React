@@ -31,11 +31,15 @@ expressApp.post("/newProject", function (request, response) {
 	var requiredInstructionsParameters = ["title", "time", "instruction"];
 	var requiredFiles = ["posterImage"];
 
+	var missingFields = [];
+	var instructionsMissingFields = [];
+
 	var error = false;
 	for (var i = requiredBodyParameters.length - 1; i >= 0; i--)
 	{
 		if (!request.body[requiredBodyParameters[i]]) {
-			error = true; break;
+			error = true;
+			missingFields.push(requiredBodyParameters[i]);
 		}
 	}
 
@@ -45,7 +49,8 @@ expressApp.post("/newProject", function (request, response) {
 		for (var j = requiredInstructionsParameters.length - 1; j >= 0; j--)
 		{
 			if (!request.body.instructions[i][requiredInstructionsParameters[j]]) {
-				error = true; break;
+				error = true;
+				instructionsMissingFields.push(requiredInstructionsParameters[j]);
 			}
 		}
 	}
@@ -53,7 +58,8 @@ expressApp.post("/newProject", function (request, response) {
 	for (var i = requiredFiles.length - 1; i >= 0; i--)
 	{
 		if (!request.files[requiredFiles[i]] || request.files[requiredFiles[i]].size <= 0) {
-			error = true; break;
+			error = true;
+			missingFields.push(requiredFiles[i]);
 		}
 	}
 
@@ -66,7 +72,23 @@ expressApp.post("/newProject", function (request, response) {
 	});
 
 	if (error) {
-		response.sendStatus(400);
+		var errorMessage = "";
+		if (missingFields.length == 1) {
+			errorMessage = "Missing field: " + missingFields[0];
+		} else if (missingFields.length > 1) {
+			errorMessage = "Missing fields: " + missingFields.join(", ");
+		}
+		if (instructionsMissingFields.length > 0) {
+			if (errorMessage.length > 0) {
+				errorMessage += "; ";
+			}
+			if (instructionsMissingFields.length == 1) {
+				errorMessage += "One or more instructions are missing the field: " + instructionsMissingFields[0];
+			} else {
+				errorMessage += "One or more instructions are missing fields: " + instructionsMissingFields.join(", ");
+			}
+		}
+		response.status(400).send(errorMessage);
 	} else {
 		response.sendStatus(200)
 	}
