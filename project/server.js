@@ -60,7 +60,9 @@ expressApp.post("/newProject", function (request, response) {
 	// Remove uploaded files
 	var files = fs.readdirSync(uploadDirectory);
 	files.forEach(function (file) {
-		fs.unlinkSync(path.join(uploadDirectory, file));
+		if (file != "README.md") {
+			fs.unlinkSync(path.join(uploadDirectory, file));
+		}
 	});
 
 	if (error) {
