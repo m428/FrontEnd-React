@@ -74,18 +74,18 @@ expressApp.post("/newProject", function (request, response) {
 	if (error) {
 		var errorMessage = "";
 		if (missingFields.length == 1) {
-			errorMessage = "Missing field: " + missingFields[0];
+			errorMessage = "The project data is missing the field: " + missingFields[0] + ".";
 		} else if (missingFields.length > 1) {
-			errorMessage = "Missing fields: " + missingFields.join(", ");
+			errorMessage = "The project data is missing the fields: " + missingFields.join(", ") + ".";
 		}
 		if (instructionsMissingFields.length > 0) {
-			if (errorMessage.length > 0) {
-				errorMessage += "; ";
-			}
+			if (errorMessage.length > 0) errorMessage += " Additionally, o";
+			else errorMessage += "O";
+
 			if (instructionsMissingFields.length == 1) {
-				errorMessage += "One or more instructions are missing the field: " + instructionsMissingFields[0];
+				errorMessage += "ne or more instructions are missing the field: " + instructionsMissingFields[0] + ".";
 			} else {
-				errorMessage += "One or more instructions are missing fields: " + instructionsMissingFields.join(", ");
+				errorMessage += "ne or more instructions are missing fields: " + instructionsMissingFields.join(", ") + ".";
 			}
 		}
 		response.status(400).send(errorMessage);
