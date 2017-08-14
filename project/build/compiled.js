@@ -22913,10 +22913,10 @@ if(false) {
 
 exports = module.exports = __webpack_require__(83)(undefined);
 // imports
-
+exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Dosis|Fira+Sans);", ""]);
 
 // module
-exports.push([module.i, ".App__app___3l6tU {\n  text-align: center;\n  overflow-x: hidden;\n  padding: 160px;\n}\n", ""]);
+exports.push([module.i, ".App__app___3l6tU {\n  text-align: center;\n  overflow-x: hidden;\n  padding: 160px;\n  font-family: 'Fira Sans', sans-serif;\n}\n", ""]);
 
 // exports
 exports.locals = {
@@ -23044,15 +23044,15 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'col-sm-6' },
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '../../public/images/shaper-logo-white.png', alt: 'logo', height: '60px' })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { className: __WEBPACK_IMPORTED_MODULE_2__Header_css___default.a.logo, src: '../../public/images/shaper-logo-white.png', alt: 'logo', height: '40px' })
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'div',
           { className: 'col-sm-6' },
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'button',
-            { className: 'btn btn-primary' },
-            'NEW PROJECT'
+            'a',
+            { href: '#', className: __WEBPACK_IMPORTED_MODULE_2__Header_css___default.a.button },
+            'New Project'
           )
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -23061,7 +23061,9 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'h1',
             { className: __WEBPACK_IMPORTED_MODULE_2__Header_css___default.a.text },
-            'Share and explore shaper projects'
+            'Share and explore ',
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+            ' shaper projects'
           )
         )
       )
@@ -23111,12 +23113,14 @@ exports = module.exports = __webpack_require__(83)(undefined);
 
 
 // module
-exports.push([module.i, ".Header__row___2k1Nx {\n  color: red;\n  overflow-x: hidden;\n  background-image: url('http://i.imgur.com/CX4cyHz.png');\n  background-size: 100%;\n  height: 40vh;\n  font-family: 'Dosis', sans-serif;\n\n}\n\n.Header__text___33Bxi {\n  color: #FFFFFF;\n  text-transform: uppercase;\n}\n", ""]);
+exports.push([module.i, "\n.Header__row___2k1Nx {\n  color: red;\n  overflow-x: hidden;\n  background-image: url('http://i.imgur.com/CX4cyHz.png');\n  background-size: 100%;\n  height: 30vh;\n  font-family: 'Dosis', sans-serif;\n\n}\n\n/*///// HEADER TEXT /////*/\n.Header__text___33Bxi {\n  color: #FFFFFF;\n  text-transform: uppercase;\n  padding: 50px;\n  line-height: 125%;\n  letter-spacing: 3px;\n}\n\n/*///// SHAPER LOGO /////*/\n.Header__logo___24w6Q {\n  margin-top: 10px;\n}\n\n/*///// HEADER BUTTON /////*/\n.Header__button___7pizZ {\n    border: 1px solid #30D2A9;\n    border-radius: 5px;\n    font-family: 'Fira Sans', sans-serif;\n    text-transform: uppercase;\n    color: white;\n    padding: 8px 10px;\n    text-decoration: none;\n    display: inline-block;\n    font-size: 14px;\n    margin: 4px 2px;\n    margin-top: 10px;\n}\n\n.Header__button___7pizZ:hover {\n    background-color: #30D2A9;\n    text-decoration: none;\n    color: #FFFFFF;\n}\n\n.Header__button___7pizZ:focus {\n    background-color: #30D2A9;\n    text-decoration: none;\n    color: #FFFFFF;\n}\n", ""]);
 
 // exports
 exports.locals = {
 	"row": "Header__row___2k1Nx",
-	"text": "Header__text___33Bxi"
+	"text": "Header__text___33Bxi",
+	"logo": "Header__logo___24w6Q",
+	"button": "Header__button___7pizZ"
 };
 
 /***/ })
