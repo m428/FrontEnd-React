@@ -22421,6 +22421,8 @@ module.exports = ReactDOMInvalidARIAHook;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 
 
+// import Bootstrap from 'react-bootstrap';
+
 
 class App extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
    render() {
@@ -22442,6 +22444,16 @@ class Header extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
             'h1',
             null,
             'Test Header'
+         ),
+         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'row' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '../public/images/header.png', alt: 'header' }),
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+               'button',
+               { type: 'button', className: 'btn btn-default' },
+               'Default'
+            )
          )
       );
    }

@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styles from './App.css';
+
 
 
 class App extends React.Component {
    render() {
       return (
-         <div>
+         <div className={styles.app}>
             <Header/>
             <Content/>
          </div>
@@ -18,6 +20,11 @@ class Header extends React.Component {
       return (
          <div>
             <h1>Test Header</h1>
+            <div className="row">
+              <img src="../public/images/header.png" alt="header" />
+              <button type="button" className="btn btn-default">Default</button>
+
+            </div>
          </div>
       );
    }
