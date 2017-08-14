@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './App.css';
-
-
+import Header from './Header.js';
 
 class App extends React.Component {
    render() {
@@ -15,20 +14,6 @@ class App extends React.Component {
    }
 }
 
-class Header extends React.Component {
-   render() {
-      return (
-         <div>
-            <h1>Test Header</h1>
-            <div className="row">
-              <img src="../public/images/header.png" alt="header" />
-              <button type="button" className="btn btn-default">Default</button>
-
-            </div>
-         </div>
-      );
-   }
-}
 
 class Content extends React.Component {
    render() {

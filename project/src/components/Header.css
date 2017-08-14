@@ -1,0 +1,12 @@
+.row {
+  color: red;
+  overflow-x: hidden;
+  background-image: url('http://i.imgur.com/CX4cyHz.png');
+  background-size: 100%;
+  height: 40vh;
+}
+
+.text {
+  color: #FFFFFF;
+  text-transform: uppercase;
+}
