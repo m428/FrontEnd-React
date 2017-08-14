@@ -18,12 +18,12 @@ expressApp.use("/static", express.static(path.join(__dirname, "/public"))); // s
 
 // Render the Community Projects page
 expressApp.get("/", function (request, response) {
-	response.sendFile(path.join(__dirname, "./views/communityProjects.html"));
+	response.sendFile(path.join(__dirname, "./src/communityProjects.html"));
 });
 
 // Render the New Project page
 expressApp.get("/newProject", function (request, response) {
-	response.sendFile(path.join(__dirname, "./views/newProject.html"));
+	response.sendFile(path.join(__dirname, "./src/newProject.html"));
 });
 
 expressApp.post("/newProject", function (request, response) {
