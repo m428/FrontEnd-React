@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Fira+Sans');
+
 .app {
   text-align: center;
   overflow-x: hidden;
   padding: 160px;
+  font-family: 'Fira Sans', sans-serif;
 }

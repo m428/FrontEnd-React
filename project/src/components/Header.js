@@ -9,14 +9,14 @@ class Header extends React.Component {
          <div>
             <div className={styles.row}>
               <div className="col-sm-6">
-                <img src='../../public/images/shaper-logo-white.png' alt="logo" height="60px"/>
+                <img className={styles.logo} src='../../public/images/shaper-logo-white.png' alt="logo" height="40px"/>
               </div>
               <div className="col-sm-6">
-                <button className="btn btn-primary">NEW PROJECT</button>
+                <a href="#" className={styles.button}>New Project</a>
               </div>
               <div className="col-sm-12">
                 <h1 className={styles.text}>
-                  Share and explore shaper projects
+                  Share and explore <br /> shaper projects
                 </h1>
               </div>
             </div>

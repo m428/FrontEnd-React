@@ -15,7 +15,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
-      },{
+      }, {
         test: /\.css$/,
         loader: 'style-loader'
       }, {
@@ -25,6 +25,12 @@ module.exports = {
           modules: true,
           localIdentName: '[name]__[local]___[hash:base64:5]'
         }
+      }, {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'url-loader?limit=1000',
+      }, {
+        test: /\.(jpg|png|gif|eot|svg|ttf|woff|woff2)$/,
+        loader: 'file-loader',
       }
     ]
   },
