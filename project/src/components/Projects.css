@@ -7,27 +7,31 @@
 .project {
   height: auto;
   width: auto;
+  margin-bottom: 34px;
 }
 
 .projectImage {
   width: 300px;
   height: 210px;
+  margin-bottom: -34px;
 }
 
 .likes {
   background-color: #FFFFFF;
-  border: 2px solid #30D2A9;
+  border: none;
   border-radius: 25px;
   font-family: 'Fira Sans', sans-serif;
-  padding: 12px 12px 10px 12px;
+  padding: 4px 12px 2px 12px;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  margin-top: 3%;
-  margin-left: 48%;
+  margin-top: -20px;
+  margin-left: 220px;;
+
 }
 
 .thumbsUp {
+  color: #30D2A9;
   font-size: 18pt;
   -moz-transform: scaleX(-1);
   -o-transform: scaleX(-1);
