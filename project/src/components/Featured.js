@@ -22,23 +22,49 @@ class Featured extends React.Component {
   }
 
    render() {
-     console.log("will we see anything?");
-     console.log(this.state.featuredProjects);
       return (
          <div>
-          <ul>
-            {this.state.featuredProjects.map(function(listValue){
+          <div>
+            {this.state.featuredProjects.slice(0, 1).map(function(featuredProject){
               return(
-                <div>
-                  <li>{listValue.title}</li>
-                  <li>{listValue.description}</li>
+              <div className="w3-content w3-display-container">
+                <div className="mySlides">
+                  <div>{featuredProject.title}</div>
+                  <div>{featuredProject.description}</div>
+                  <div>{featuredProject.likes}</div>
+                  <img className={styles.projectImage} src={'http://localhost:8081'+ featuredProject.posterImage} alt="project image" />
                 </div>
+                <button className="w3-button w3-black w3-display-left" onClick="plusDivs(-1)">&#10094;</button>
+                <button className="w3-button w3-black w3-display-right" onClick="plusDivs(1)">&#10095;</button>
+              </div>
               )
             })}
-          </ul>
+          </div>
          </div>
       );
-   }
-}
+   } // end render()
+
+    carosel() {
+       var slideIndex = 1;
+       showDivs(slideIndex);
+
+       function plusDivs(n) {
+         showDivs(slideIndex += n);
+       }
+
+       function showDivs(n) {
+         var i;
+         var x = document.getElementsByClassName("mySlides");
+         if (n > x.length) {slideIndex = 1}
+         if (n < 1) {slideIndex = x.length}
+         for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+         }
+         x[slideIndex-1].style.display = "block";
+       }
+    }
+
+
+} //end of component
 
 export default Featured;
