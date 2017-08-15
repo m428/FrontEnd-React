@@ -13,11 +13,11 @@ class App extends React.Component {
          <div className={styles.app}>
             <Header />
             <Featured />
-            <div className="row">
-              <div className="col-sm-6">
+            <div className={styles.row}>
+              <div className={"col-sm-9"}>
                 <Categories />
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-3">
                 <Search />
               </div>
             </div>

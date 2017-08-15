@@ -22,18 +22,22 @@ class Categories extends React.Component {
   }
 
    render() {
-     console.log("will we see anything?");
      console.log(this.state.categories);
       return (
          <div>
-          <div className={styles.categoryBox}>
-          {this.state.categories.map(function(value){
+          <div className={styles.categoryContainer}>
+            <div className="col-xs-3">
+              <div className={styles.categoryNames}>All</div>
+            </div>
+            {this.state.categories.slice(0, 3).map(function(value){
             return(
-              <div className={styles.categoryNames}>
-                {value}
+              <div className="col-xs-3">
+                <div className={styles.categoryNames}>
+                  {value}
+                </div>
               </div>
-              )
-           })}
+                )
+              })}
           </div>
          </div>
       );

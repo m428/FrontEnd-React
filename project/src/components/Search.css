@@ -1,3 +1,5 @@
 .searchBox {
   background-color: pink;
+  width: 90%;
+  margin-right: -200px;
 }
