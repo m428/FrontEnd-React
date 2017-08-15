@@ -1,5 +1,26 @@
 .searchBox {
-  background-color: pink;
   width: 90%;
   margin-right: -200px;
+  margin-top: 38px;
+  text-align: left;
+  margin-left: -46px;
+}
+
+.search {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12pt;
+  color: #A9A9A9;
+  font-weight: bold;
+}
+
+.searchIcon {
+  margin-right: 10px;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  font-size: 18pt;
 }
