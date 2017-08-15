@@ -1,0 +1,8 @@
+.categoryBox {
+  background-color: blue;
+}
+
+.categoryNames {
+  background-color: red;
+  display: inline-block;
+}
