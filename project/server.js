@@ -6,6 +6,8 @@ var express		= require("express");				// Main server framework
 var multipart	= require("connect-multiparty");	// Express middleware for parsing multipart/form-data
 var path		= require("path");
 var fs			= require("fs");
+var cors = require('cors')
+
 
 // Local files
 var data = require("./data.js");
@@ -13,6 +15,9 @@ var uploadDirectory = path.join(__dirname, "./uploads")
 
 // Set up the Express Application
 expressApp = express();
+expressApp.use(cors())
+
+
 expressApp.use(multipart({ uploadDir: uploadDirectory}));
 expressApp.use("/static", express.static(path.join(__dirname, "/public"))); // serve up static resources
 
@@ -120,7 +125,7 @@ expressApp.get("/projects/:category", function (request, response) {
 });
 
 // Start the server
-var port = process.argv[2] || 8080;
+var port = process.argv[2] || 8081;
 expressApp.listen(port, function () {
 	console.log("You can specify which port to use by running `node server.js [port #]`");
 	console.log("Server running on %d", port);
