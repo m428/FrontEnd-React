@@ -6,7 +6,7 @@ import styles from './LeftArrow.css'
 const LeftArrow = (props) => {
   return (
     <div onClick={props.previousSlide} className={styles.backArrow}>
-      <FaAngleLeft />
+      <FaAngleLeft className={styles.icon}/>
     </div>
   );
 }

@@ -21,7 +21,7 @@ class Slider extends React.Component {
   render() {
     return (
       <div className="slider">
-      <h3 className={styles.title}>awesome projects</h3>
+      <h6 className={styles.title}>awesome projects</h6>
         <div className="row">
           <div className={styles.sliderComponents}>
             <LeftArrow previousSlide={this.previousSlide} />

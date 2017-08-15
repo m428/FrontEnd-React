@@ -8,7 +8,7 @@ import styles from './RightArrow.css'
 const RightArrow = (props) => {
   return (
     <div onClick={props.nextSlide} className={styles.nextArrow}>
-      <FaAngleRight />
+      <FaAngleRight className={styles.icon}/>
     </div>
   );
 }

@@ -1,11 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './FeaturedOne.css'
-
-
-
-import RightArrow from './RightArrow.js'
-import LeftArrow from './LeftArrow.js'
+import TiThumbsUp from 'react-icons/lib/ti/thumbs-up';
 
 
 class FeaturedOne extends React.Component {
@@ -42,9 +38,9 @@ class FeaturedOne extends React.Component {
                     <img className={styles.projectImage} src={'http://localhost:8081'+ featuredProject.posterImage} alt="project image" />
                   </div>
                   <div className="col-xs-6">
-                    <div>{featuredProject.title}</div>
-                    <div>{featuredProject.description}</div>
-                    <div>{featuredProject.likes}</div>
+                    <div className={styles.title}>{featuredProject.title}</div>
+                    <div className={styles.description}>{featuredProject.description}</div>
+                    <button className={styles.likes}><TiThumbsUp className={styles.thumbsUp}/>{featuredProject.likes} </button>
                   </div>
                 </div>
               </div>
@@ -53,8 +49,7 @@ class FeaturedOne extends React.Component {
           </div>
          </div>
       );
-   } // end render()
-
-} //end of component
+   }
+}
 
 export default FeaturedOne;
