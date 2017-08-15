@@ -2,8 +2,57 @@
   width: 800px;
   margin-top: 80px;
   margin-bottom: 80px;
+  text-align: left;
 }
 
 .projectImage {
   width: 400px;
+}
+
+.title {
+  font-size: 18pt;
+  padding-left: 30px;
+}
+
+.description {
+  padding-left: 30px;
+  color: #A9A9A9;
+}
+
+.likes {
+  background-color: #FFFFFF;
+  border: 2px solid #F5F5F5;
+  border-radius: 25px;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 4px 12px 0px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 90px;
+  margin-left: 30px;
+  width: 110px;
+  height: 50px;
+  text-align: left;
+}
+
+.likes:hover {
+  background-color: #30D2A9;
+  color: #FFFFFF;
+}
+
+.thumbsUp {
+  color: #30D2A9;
+  padding-right: 5px;
+  margin-right: 5px;
+  font-size: 28pt;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+
+.thumbsUp:hover {
+  color: #FFFFFF;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Header.css';
 
-
 class Header extends React.Component {
    render() {
       return (

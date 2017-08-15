@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './featuredTwo.css'
+import styles from './featuredThree.css'
 import TiThumbsUp from 'react-icons/lib/ti/thumbs-up';
 
 
-class featuredTwo extends React.Component {
+class featuredThree extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -29,7 +29,7 @@ class featuredTwo extends React.Component {
       return (
          <div className={styles.slide}>
           <div>
-            {this.state.featuredProjects.slice(1, 2).map(function(featuredProject){
+            {this.state.featuredProjects.slice(2, 3).map(function(featuredProject){
                 console.log(featuredProject)
               return(
               <div className="slide">
@@ -52,4 +52,4 @@ class featuredTwo extends React.Component {
    }
 }
 
-export default featuredTwo;
+export default featuredThree;

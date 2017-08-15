@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import styles from './Slider.css'
 import FeaturedOne from './FeaturedOne.js'
 import FeaturedTwo from './FeaturedTwo.js'
+import FeaturedThree from './FeaturedThree.js'
+
 import RightArrow from './RightArrow.js'
 import LeftArrow from './LeftArrow.js'
 
@@ -31,6 +33,9 @@ class Slider extends React.Component {
           </div>
           <div className={styles.sliderComponents}>
             { this.state.slideCount === 2 ? <FeaturedTwo /> : null }
+          </div>
+          <div className={styles.sliderComponents}>
+            { this.state.slideCount === 3 ? <FeaturedThree /> : null }
           </div>
           <div className={styles.sliderComponents}>
             <RightArrow nextSlide={this.nextSlide} />

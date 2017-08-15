@@ -3,10 +3,6 @@
   vertical-align:top;
 }
 
-.slide {
-  background-color: red;
-}
-
 /*///// SLIDER TITLE /////*/
 .title {
   text-transform: uppercase;
@@ -15,5 +11,6 @@
   letter-spacing: 2px;
   text-align: left;
   margin-top: 50px;
+  margin-bottom: -50px;
   margin-left: 100px;
 }
