@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import styles from './App.css';
 import Categories from './Categories.js';
 import Header from './Header.js';
-import Featured from './Featured.js';
 import Search from './Search.js';
-import Slider from './Slider.js'
+import Slider from './Carousel/Slider.js'
 import Projects from './Projects.js';
 
 class App extends React.Component {
