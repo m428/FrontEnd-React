@@ -12,7 +12,7 @@ class Featured extends React.Component {
 
   componentDidMount() {
     fetch('http://localhost:8081/featuredProjects')
-    .then(response => response.json() )
+    .then(response => response.json())
     .then(responseData => {
       this.setState({ featuredProjects: responseData });
     })

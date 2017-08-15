@@ -1,0 +1,39 @@
+.projectContainer {
+  background-color: #F5F5F5;
+  padding-top: 20px;
+  height: 800px;
+}
+
+.project {
+  height: auto;
+  width: auto;
+}
+
+.projectImage {
+  width: 300px;
+  height: 210px;
+}
+
+.likes {
+  background-color: #FFFFFF;
+  border: 2px solid #30D2A9;
+  border-radius: 25px;
+  font-family: 'Fira Sans', sans-serif;
+  padding: 12px 12px 10px 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 3%;
+  margin-left: 48%;
+
+  color: red;
+}
+
+.thumbsUp {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}

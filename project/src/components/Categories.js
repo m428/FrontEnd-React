@@ -21,9 +21,6 @@ class Categories extends React.Component {
     });
   }
 
-
-
-
    render() {
      console.log("will we see anything?");
      console.log(this.state.categories);

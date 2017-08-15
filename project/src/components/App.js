@@ -5,8 +5,7 @@ import Categories from './Categories.js';
 import Header from './Header.js';
 import Featured from './Featured.js';
 import Search from './Search.js';
-
-
+import Projects from './Projects.js';
 
 class App extends React.Component {
    render() {
@@ -22,6 +21,7 @@ class App extends React.Component {
                 <Search />
               </div>
             </div>
+            <Projects />
          </div>
       );
    }
