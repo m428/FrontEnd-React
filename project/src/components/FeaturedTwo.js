@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import styles from './Featured.css';
+import styles from './FeaturedTwo.css'
 
-class Featured extends React.Component {
+class FeaturedTwo extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -23,19 +23,21 @@ class Featured extends React.Component {
 
    render() {
       return (
-         <div>
+         <div className={styles.slide}>
           <div>
-            {this.state.featuredProjects.slice(0, 1).map(function(featuredProject){
+            {this.state.featuredProjects.slice(1, 2).map(function(featuredProject){
+              console.log(featuredProject)
+
               return(
-              <div className="w3-content w3-display-container">
-                <div className="mySlides">
-                  <div>{featuredProject.title}</div>
+              <div>
+                <div>
+                  <h1>{featuredProject.title}</h1>
+                  <div>{console.log(featuredProject.title)}</div>
+
                   <div>{featuredProject.description}</div>
                   <div>{featuredProject.likes}</div>
                   <img className={styles.projectImage} src={'http://localhost:8081'+ featuredProject.posterImage} alt="project image" />
                 </div>
-                <button className="w3-button w3-black w3-display-left" onClick="plusDivs(-1)">&#10094;</button>
-                <button className="w3-button w3-black w3-display-right" onClick="plusDivs(1)">&#10095;</button>
               </div>
               )
             })}
@@ -44,9 +46,7 @@ class Featured extends React.Component {
       );
    } // end render()
 
-
-
-
 } //end of component
 
-export default Featured;
+// console.log(this)
+export default FeaturedTwo;

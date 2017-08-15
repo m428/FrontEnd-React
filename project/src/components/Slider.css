@@ -1,0 +1,19 @@
+.sliderComponents {
+  background-color: blue;
+  display: inline-block;
+  vertical-align:top; /* add this rule */
+
+}
+
+.slide {
+  /*width: 10%;*/
+  background-color: red;
+}
+
+/*///// SLIDER TITLE /////*/
+.title {
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}

@@ -5,6 +5,7 @@ import Categories from './Categories.js';
 import Header from './Header.js';
 import Featured from './Featured.js';
 import Search from './Search.js';
+import Slider from './Slider.js'
 import Projects from './Projects.js';
 
 class App extends React.Component {
@@ -12,7 +13,7 @@ class App extends React.Component {
       return (
          <div className={styles.app}>
             <Header />
-            <Featured />
+            <Slider />
             <div className={styles.row}>
               <div className={"col-sm-9"}>
                 <Categories />
