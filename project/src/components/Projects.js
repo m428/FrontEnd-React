@@ -32,8 +32,8 @@ class Projects extends React.Component {
               <div className="col-xs-4">
                 <div className={styles.project}>
                  <img className={styles.projectImage} src={'http://localhost:8081'+ project.posterImage} alt="project image" />
-                 <button className={styles.likes}><TiThumbsUp className={styles.thumbsUp}/>{project.likes} </button>
-                 <div>{project.title}</div>
+                 <button className={styles.projectLikes}><TiThumbsUp className={styles.thumbsUp}/>{project.likes} </button>
+                 <div className={styles.projectTitle}>{project.title}</div>
                </div>
               </div>
              )
