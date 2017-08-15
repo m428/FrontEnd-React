@@ -44,7 +44,7 @@ class Featured extends React.Component {
       );
    } // end render()
 
-    carosel() {
+    carousel() {
        var slideIndex = 1;
        showDivs(slideIndex);
 
