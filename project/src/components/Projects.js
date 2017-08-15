@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styles from './Projects.css';
+import TiThumbsUp from 'react-icons/lib/ti/thumbs-up';
+
 
 class Projects extends React.Component {
   constructor() {
@@ -30,7 +32,7 @@ class Projects extends React.Component {
               <div className="col-xs-4">
                 <div className={styles.project}>
                  <img className={styles.projectImage} src={'http://localhost:8081'+ project.posterImage} alt="project image" />
-                 <button className={styles.likes}> <span className={styles.thumbsUp}><span className="glyphicon glyphicon-thumbs-up"></span></span> {project.likes} </button>
+                 <button className={styles.likes}><TiThumbsUp className={styles.thumbsUp}/>{project.likes} </button>
                  <div>{project.title}</div>
                </div>
               </div>
