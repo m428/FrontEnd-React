@@ -1,7 +1,7 @@
 Front End Coding Project
 ========================
 
-- `./project`: Contains all of the files to be shared with a candidate
+- `./project`: Contains all of the application files
 - `./testing`: Contains some rudimentary files for testing the project. To test, run `./testing/test.sh`.
 
 Screenshots
